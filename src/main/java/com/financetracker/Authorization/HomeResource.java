@@ -2,6 +2,7 @@ package com.financetracker.Authorization;
 
 import com.financetracker.Authorization.models.AuthenticationRequest;
 import com.financetracker.Authorization.models.AuthenticationResponse;
+import com.financetracker.Authorization.services.CustomUserDetailsService;
 import com.financetracker.Authorization.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,7 @@ public class HomeResource {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailsService CustomUserDetailsService;
 
     @Autowired
     private JwtUtil jwtTokenUtil;
